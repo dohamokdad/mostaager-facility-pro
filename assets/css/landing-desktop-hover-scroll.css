@@ -1,0 +1,30 @@
+[data-desktop-frame="true"]{
+  /* Desktop frame look */
+  width: min(1100px, 96vw);
+  height: 650px;
+  border: 2px solid #111;
+  border-radius: 14px;
+  margin: 20px auto;
+  overflow: auto;              /* Important: scroll happens inside frame */
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  scroll-behavior: smooth;    /* Fallback */
+}
+
+[data-landing-hover="true"]{
+  cursor: pointer;
+}
+
+/* Optional section spacing */
+.ms-landing-section{
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#ms-demo,
+[data-demo-target="true"]{
+  background: #f6f7fb;
+  border-top: 1px solid #e6e6e6;
+}
+

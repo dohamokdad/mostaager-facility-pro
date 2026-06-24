@@ -1,0 +1,95 @@
+.ms-dashboard{
+    display:flex;
+    min-height:100vh;
+    background:#f4f7fb;
+    font-family:Cairo,sans-serif;
+}
+
+.ms-sidebar{
+    width:280px;
+    background:#0f172a;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.ms-sidebar-title{
+    color:#fff;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.ms-tab-link{
+    background:rgba(255,255,255,.05);
+    border:none;
+    color:#fff;
+    padding:15px 18px;
+    border-radius:16px;
+    cursor:pointer;
+    text-align:right;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.ms-tab-link:hover,
+.ms-tab-link.active{
+    background:#2563eb;
+}
+
+.ms-content{
+    flex:1;
+    padding:40px;
+    /* Allow full page scroll and avoid scroll-lock issues */
+    min-height:0;
+    overflow-y:visible;
+    height:auto;
+}
+
+
+
+.ms-tab-panel{
+    display:none;
+}
+
+.ms-tab-panel.active{
+    display:block;
+}
+
+.ms-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
+
+.ms-card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.ms-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.ms-card-value{
+    font-size:34px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+@media(max-width:991px){
+
+    .ms-dashboard{
+        flex-direction:column;
+    }
+
+    .ms-sidebar{
+        width:100%;
+    }
+
+}

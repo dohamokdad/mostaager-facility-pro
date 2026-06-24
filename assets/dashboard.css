@@ -1,0 +1,102 @@
+.ms-dashboard {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.ms-sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 14px rgba(15, 23, 42, 0.04);
+}
+
+.ms-sidebar-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1f2937;
+}
+
+.ms-sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ms-sidebar-menu li + li {
+    margin-top: 12px;
+}
+
+.ms-sidebar-menu a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #111827;
+    text-decoration: none;
+    background: #f8fafc;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.ms-sidebar-menu a:hover,
+.ms-sidebar-menu a:focus {
+    background: #e2e8f0;
+    color: #111827;
+}
+
+.ms-sidebar-menu a.ms-tab-link.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.ms-content {
+    flex: 1;
+    min-width: 380px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 18px rgba(15, 23, 42, 0.06);
+
+    /* Avoid locking page scroll — let content size naturally */
+    min-height: 0;
+    overflow-y: visible;
+    height: auto;
+}
+
+/* Prevent page-level scroll lock (when containers get fixed heights) */
+.ms-dashboard {
+    min-height: 0;
+}
+
+
+
+.ms-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.ms-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 1px 8px rgba(15, 23, 42, 0.04);
+}
+
+@media (max-width: 900px) {
+    .ms-dashboard {
+        flex-direction: column;
+    }
+
+    .ms-sidebar {
+        width: 100%;
+        min-width: unset;
+    }
+}
